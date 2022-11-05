@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta anme="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio Website</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/44e0f38203.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+     <div id="header">
+        <div class="container">
+            <nav>
+                <img src="IMAGES/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#portfolio">PORTFOLIO</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+                </nav>
+            <div class="header-text">
+                <h1>Hi,I'm <span>Dewangie</span></h1>
+            </div>
+        </div>
+     </div> 
+     <!-------------------about---------->
+       <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="IMAGES/red hair ;).jpeg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>I'm a first year B.Tech student at UPES dehradun.
+                        I graduated from my High School in 2021.
+                    I'm currently working on my skills in programming.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Coding</span><br>Familiar with C,HTML,CSS and bit of Javascript.</li>
+                            <li><span>Extra-Curriculum</span><br>Can watch screen for continuous long-hours.</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Class 10</span><br>90% Marks in CBSE Board 2019 .</li>
+                            <li><span>Class 12</span><br>92% Marks in CBSE Board.</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+       </div>
+       <!-------portfolio------->
+       <div id="portfolio">
+        <div class="container">
+           <h1 class="sub-title">Portfolio</h1> 
+           <div class="work-list">
+            <div class="work">
+                <img src="IMAGES/work-1.png">
+                <div class="layer">
+                    <h3>Social Media App</h3>
+                    <p>The app connect you to the talented people around the world.
+                        Download it from Play Store.</p>
+                        <a href="#"><i class="fa-light fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="IMAGES/work-2.png">
+                <div class="layer">
+                    <h3>Music App</h3>
+                    <p>The app connect you to the talented people around the world.
+                        Download it from Play Store.</p>
+                        <a href="#"><i class="fa-light fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="IMAGES/work-3.png">
+                <div class="layer">
+                    <h3>Online Shopping App</h3>
+                    <p>The app connect you to the talented people around the world.
+                        Download it from Play Store.</p>
+                        <a href="#"><i class="fa-light fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+           </div>  
+        </div>
+       </div>
+       <!-----contact------>
+      <div id="contact">
+        <div class="container">
+             <div class="row">
+                <div class="contect-left">
+                 <h1 class="sub-title">Contact Me</h1>
+                 <br>
+                 <p><i class="fa-solid fa-paper-plane"></i> dewangi.mohan@gmail.com</p>
+                 <br>
+                 
+                 <div class="social-icons">
+                    <a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+                 </div> 
+                </div>
+                <div class="contact-right">
+                    <img src="">
+                </div>
+             </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright <span>&copy;</span> Dewangie</p>
+        </div>
+    
+      </div>
+    
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link"); 
+            document.getElementById(tabname).classList.add("active-tab");
+             }
+        </script>
+        <script>
+            var sidemenu = document.getElementById("sidemenu");
+            function openmenu(){
+                sidemenu.style.right = "0";
+            }   
+            function closemenu(){
+                sidemenu.style.right = "-200px";
+            }   
+        </script>
+    </body>
+</html>
